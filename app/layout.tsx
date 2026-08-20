@@ -1,0 +1,5 @@
+import type { Metadata } from "next";
+import "./globals.css";
+export const metadata: Metadata = {title:"Boucherie Restaurant Redesign",description:"A traditional French restaurant celebrating good food and joie de vivre across New York, Chicago, Miami and Washington D.C.",openGraph:{title:"Boucherie Restaurant Redesign",description:"A French restaurant experience inspired by La Belle Époque.",type:"website"},other:{"codex-preview":"development"}};
+const schema={"@context":"https://schema.org","@type":"Restaurant","name":"Boucherie","url":"https://www.boucherieus.com/","servesCuisine":"French","description":"A traditional French restaurant inspired by La Belle Époque, blending a refined Parisian brasserie with an indulgent steakhouse.","areaServed":["New York","Chicago","Miami","Washington D.C."],"sameAs":["https://www.instagram.com/boucherie_us/"]};
+export default function RootLayout({children}:{children:React.ReactNode}){return <html lang="en"><body>{children}<script type="application/ld+json" dangerouslySetInnerHTML={{__html:JSON.stringify(schema)}}/></body></html>}
